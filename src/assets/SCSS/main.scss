@@ -1,0 +1,39 @@
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.outline-none {
+    outline: none !important;
+}
+
+.loginForm {
+    border: 1px solid #a7a3a3;
+    border-radius: 5px;
+}
+
+.btnLink {
+    color: #0062cc !important;
+}
+
+.btnLink:hover {
+    text-decoration: underline !important;
+    color: #0062cc !important;
+    cursor: pointer !important;
+}
+
+.titleTxt {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1em;
+    color: rgba(10, 60, 150, 0.8);
+    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+    margin-bottom: 25px;
+}
+
+.errorMsg {
+    color: #dc3545 !important;
+    display: block !important;
+    font-size: 11px !important;
+    margin-top: -12px !important;
+}

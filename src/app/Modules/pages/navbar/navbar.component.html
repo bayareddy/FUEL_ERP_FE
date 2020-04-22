@@ -1,0 +1,28 @@
+<div class="header pt-2">
+    <div class="d-flex justify-content-between">
+        <div>
+            <div class="logoDivs ml-4">
+                <p><i class="fas fa-bars font-22 cursor-pointer" (click)="openSideNav=!openSideNav"></i></p>
+                <p class="titleTxt ml-4 font-28">Fuel ERP</p>
+            </div>
+        </div>
+        <div>
+            <p class="userProfile mr-4 font-18 rounded-circle border cursor-pointer" (click)="logout()">A</p>
+
+            <!-- <button mat-button [matMenuTriggerFor]="menu" class="userProfile mr-4 font-18 rounded-circle border cursor-pointer outline-none">A</button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item class="outline-none" (click)="logout()">Log Out</button>
+            </mat-menu> -->
+        </div>
+    </div>
+</div>
+<div class="bg-light homeBody">
+    <div id="mySidenav" class="sidenav pt-6" [ngClass]="openSideNav ? 'showNav':'' ">
+        <a class="font-30 float-right mr-2" (click)="closeNav()">&times;</a>
+        <a *ngFor="let item of MenuList" [routerLink]="item.href" routerLinkActive="active">
+            <i class="{{item.iconText}}"></i>
+            <span class="ml-2">{{item.name}}</span>
+        </a>
+    </div>
+    <router-outlet></router-outlet>
+</div>

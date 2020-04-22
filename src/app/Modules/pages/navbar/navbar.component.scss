@@ -1,0 +1,59 @@
+.userProfile {
+    padding: 5px 10px;
+    color: white;
+    background-color: #0a3c96;
+    font-weight: 500;
+}
+
+.header {
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.09);
+    background-color: #fff;
+}
+
+.logoDivs>p {
+    display: inline-block;
+}
+
+.homeBody {
+    overflow-x: auto;
+}
+
+.showNav {
+    width: 14.5% !important;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #0a3c96;
+    overflow-x: hidden;
+    transition: 0.5s;
+    a {
+        padding: 20px 5px 20px 23px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #909EC5;
+        display: block;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    a:hover {
+        color: #ddd;
+    }
+    .active {
+        color: #fff !important;
+    }
+}
+
+@media screen and (min-device-width: 300px) and (max-device-width: 800px) {
+    .showNav {
+        width: 42% !important;
+    }
+}
