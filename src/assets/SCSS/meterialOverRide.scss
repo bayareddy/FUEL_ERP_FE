@@ -1,0 +1,27 @@
+.userProfile {
+    color: white;
+    background-color: #0a3c96;
+    font-weight: 500;
+    &.mat-button {
+        padding: 0px 10px !important;
+        line-height: 30px !important;
+        min-width: 30px !important;
+    }
+}
+
+.logout {
+    .mat-menu-item:hover {
+        background-color: #fff;
+    }
+    &.mat-menu-panel {
+        min-height: 30px !important;
+        max-height: 40px !important;
+        min-width: 100px !important;
+        max-width: 150px !important;
+        .mat-menu-item {
+            line-height: 20px;
+            height: 20px;
+            text-align: center;
+        }
+    }
+}

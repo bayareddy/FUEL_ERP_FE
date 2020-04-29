@@ -8,12 +8,14 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   openSideNav:boolean = false;
-  MenuList:any = [{name:'Home', href:'/home', iconText:'fas fa-home'},
-  {name:'Sales', href:'/sales', iconText:'fas fa-gas-pump'},
-  {name:'Accounts', href:'/accounts', iconText:'fas fa-file-contract'},
-  {name:'Shifts', href:'/shifts', iconText:'fas fa-tachometer-alt'},
-  {name:'Dashboard', href:'/dashboard', iconText:'fas fa-th'},
-  {name:'Users Management', href:'/userManagement', iconText:'fas fa-users'}];
+  MenuList:any = [{name:'Home', href:'/main/home', iconText:'fas fa-home'},
+  {name:'Sales', href:'/main/sales', iconText:'fas fa-gas-pump'},
+  {name:'Credit Sale', href:'/main/creditSale', iconText:'fas fa-credit-card'},
+  {name:'Accounts', href:'/main/accounts', iconText:'fas fa-file-contract'},
+  {name:'Shifts', href:'/main/shifts', iconText:'fas fa-tachometer-alt'},
+  {name:'Dashboard', href:'/main/dashboards', iconText:'fas fa-th'},
+  {name:'Users Management', href:'/main/userManagement', iconText:'fas fa-users'},
+];
 
   constructor(private router:Router) { }
 
@@ -25,7 +27,8 @@ export class NavbarComponent implements OnInit {
   }
 
   logout(){
-    this.router.navigate[('')]
+    localStorage.clear();
+    this.router.navigate(['login']);
   }
 
 }

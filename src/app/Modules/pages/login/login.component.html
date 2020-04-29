@@ -26,8 +26,8 @@
             <div *ngIf="submitted && f.Password.errors" class="errorMsg ml-1">
                 <div *ngIf="f.Password.errors.required">Password is required</div>
             </div>
-            <p *ngIf="false" class="errorMsg ml-1">
-                Invalid User Name or Password
+            <p *ngIf="loginError" class="errorMsg ml-1">
+                Incorrect Username or Password.
             </p>
             <div class="form-group form-check d-flex justify-content-between">
                 <div>
