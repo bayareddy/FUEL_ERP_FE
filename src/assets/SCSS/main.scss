@@ -37,3 +37,34 @@
     font-size: 11px !important;
     margin-top: -12px !important;
 }
+
+.tableTextCenter {
+    thead {
+        tr {
+            th {
+                text-align: center !important;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                text-align: center !important;
+            }
+        }
+    }
+}
+
+.tableHover {
+    tbody {
+        tr:hover {
+            background-color: #efefef;
+        }
+    }
+}
+
+.tableWith-85 {
+    width: 85% !important;
+    display: block !important;
+    margin: 0 auto !important;
+}

@@ -1,0 +1,163 @@
+<div class="container-fluid h-100">
+    <div class="h-100 mt-04 ml-md-5 mr-md-5">
+        <div class="">
+            <h1 class="">Credit Sale</h1>
+            <div class="table-responsive tableWith-85">
+                <table class="table table-bordered tableHover tableTextCenter">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Credit Cust Name</th>
+                            <th>Products</th>
+                            <th>Total Sales</th>
+                            <th>Pain Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of cerditSaleTableData">
+                            <td>{{item.sNo}}</td>
+                            <td>{{item.creditCustName}}</td>
+                            <td>{{item.products}}</td>
+                            <td>{{item.totalSales}}</td>
+                            <td>{{item.paidAmount}}</td>
+                            <td>
+                                <a class="cursor-pointer" matTooltip="Edit"><i class="fas fa-edit"></i></a>
+                                <a class="ml-3 cursor-pointer" matTooltip="Delete"><i class="fas fa-trash-alt"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="form-horizontal">
+            <h1 class="">Add Credit Sales</h1>
+            <div class="tableWith-85">
+                <!-- <form class="form-horizontal" action="/action_page.php"> -->
+                <div class="row form-group">
+                    <label class="control-label col-sm-2 mt-2 font-weight-500" for="email">Customer Name</label>
+                    <div class="col-sm-5">
+                        <select class="form-control">
+                            <option *ngFor="let option of customerNameList">{{option}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="control-label col-sm-2 mt-2 font-weight-500" for="pwd">Out Standing Balance</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="control-label col-sm-2 mt-2 font-weight-500" for="pwd">Slip No</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="control-label col-sm-2 mt-2 font-weight-500" for="pwd">Slip Date</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="control-label col-sm-2 mt-2 font-weight-500" for="pwd">Driver Name</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="control-label col-sm-2 mt-2 font-weight-500" for="pwd">Vec No</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="control-label col-sm-2 mt-2 font-weight-500" for="pwd">DSM No</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered tableHover tableTextCenter">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Product</th>
+                                <th>Qty</th>
+                                <th>Ltr Price</th>
+                                <th>GST(%)</th>
+                                <th>VAT(%)</th>
+                                <th>Total Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of productTableData">
+                                <td>{{item.sNo}}</td>
+                                <td>{{item.product}}</td>
+                                <td>{{item.qty}}</td>
+                                <td>{{item.ltrPrice}}</td>
+                                <td>{{item.gst}}</td>
+                                <td>{{item.vat}}</td>
+                                <td>{{item.totalAmount}}</td>
+                                <td>
+                                    <a class="cursor-pointer" matTooltip="Edit"><i class="fas fa-edit"></i></a>
+                                    <a class="ml-3 cursor-pointer" matTooltip="Delete"><i class="fas fa-trash-alt"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row form-group">
+                    <label class="control-label col-sm-2 mt-2 font-weight-500" for="pwd">Total Amount</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="control-label col-sm-2 mt-2 font-weight-500" for="pwd">Other Charges</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="control-label col-sm-2 mt-2 font-weight-500" for="pwd">New Total</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="control-label col-sm-2 mt-2 font-weight-500" for="pwd">Paid Cash</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="control-label col-sm-2 mt-2 font-weight-500" for="pwd">Paid Card</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="control-label col-sm-2 mt-2 font-weight-500" for="pwd">Paid Bank</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="control-label col-sm-2 mt-2 font-weight-500" for="pwd">Balance Amount</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="offset-sm-2">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+                <!-- </form> -->
+            </div>
+        </div>
+    </div>
+</div>
