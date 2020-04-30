@@ -28,3 +28,25 @@
 .mt-7 {
     margin-top: 7rem !important;
 }
+
+.mt-6 {
+    margin-top: 6rem !important;
+}
+
+.mt-04 {
+    margin-top: 4rem !important;
+}
+
+// ===> Font Weight <=== //
+.font-weight-500 {
+    font-weight: 500 !important;
+}
+
+@media screen and (min-device-width: 500px) and (max-device-width: 1080px) {
+    .ml-md-5 {
+        margin-right: 3rem !important;
+    }
+    .mr-md-5 {
+        margin-right: 3rem !important;
+    }
+}

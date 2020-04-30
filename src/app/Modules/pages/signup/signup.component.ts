@@ -31,7 +31,7 @@ export class SignupComponent implements OnInit {
     if (this.regForm.invalid) {
       return;
     };
-    this.router.navigate(['home']);
+    this.router.navigate(['main/home']);
   }
   
   keyPressText(event: any) {

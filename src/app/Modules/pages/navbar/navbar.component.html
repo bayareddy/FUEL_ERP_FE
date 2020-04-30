@@ -7,26 +7,34 @@
             </div>
         </div>
         <div>
+<<<<<<< HEAD
             <p class="" (click)="logout()">
                 <img class="roundImg" (click)='zoom=!zoom' [ngClass]='zoom ? "roundImg1":""' [src]="imgPath" width="40px" height="40px">&nbsp;<span><b>PardhaSaradhi </b></span>
             </p>
             
+=======
+            <!-- <p class="userProfile mr-4 font-18 rounded-circle border cursor-pointer" (click)="logout()">A</p> -->
+>>>>>>> 0ef4afd140262038c8aefd44aeafc022c35e2ee7
 
-            <!-- <button mat-button [matMenuTriggerFor]="menu" class="userProfile mr-4 font-18 rounded-circle border cursor-pointer outline-none">A</button>
-            <mat-menu #menu="matMenu">
+            <button mat-button [matMenuTriggerFor]="menu" class="userProfile mr-4 font-18 rounded-circle border cursor-pointer outline-none">A</button>
+            <mat-menu #menu="matMenu" class="logout">
                 <button mat-menu-item class="outline-none" (click)="logout()">Log Out</button>
-            </mat-menu> -->
+            </mat-menu>
         </div>
     </div>
 </div>
 <div class="homeBody">
     <div id="mySidenav" class="sidenav pt-6" [ngClass]="openSideNav ? 'showNav':'' ">
         <a class="font-30 float-right mr-2" (click)="closeNav()">&times;</a>
+<<<<<<< HEAD
         <p class="">
             <img class="roundImg" [src]="imgPath" width="40px"
              height="40px">&nbsp;<span><b style="color: white;">PardhaSaradhi </b></span>
         </p>
         <!-- <a *ngFor="let item of MenuList" [routerLink]="item.href" routerLinkActive="active">
+=======
+        <a *ngFor="let item of MenuList" routerLink="{{item.href}}" routerLinkActive="active">
+>>>>>>> 0ef4afd140262038c8aefd44aeafc022c35e2ee7
             <i class="{{item.iconText}}"></i>
             <span class="ml-2">{{item.name}}</span>
         </a> -->
