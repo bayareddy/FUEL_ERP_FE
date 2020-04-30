@@ -7,7 +7,10 @@
             </div>
         </div>
         <div>
-            <p class="userProfile mr-4 font-18 rounded-circle border cursor-pointer" (click)="logout()">A</p>
+            <p class="" (click)="logout()">
+                <img class="roundImg" (click)='zoom=!zoom' [ngClass]='zoom ? "roundImg1":""' [src]="imgPath" width="40px" height="40px">&nbsp;<span><b>PardhaSaradhi </b></span>
+            </p>
+            
 
             <!-- <button mat-button [matMenuTriggerFor]="menu" class="userProfile mr-4 font-18 rounded-circle border cursor-pointer outline-none">A</button>
             <mat-menu #menu="matMenu">
@@ -16,13 +19,74 @@
         </div>
     </div>
 </div>
-<div class="bg-light homeBody">
+<div class="homeBody">
     <div id="mySidenav" class="sidenav pt-6" [ngClass]="openSideNav ? 'showNav':'' ">
         <a class="font-30 float-right mr-2" (click)="closeNav()">&times;</a>
-        <a *ngFor="let item of MenuList" [routerLink]="item.href" routerLinkActive="active">
+        <p class="">
+            <img class="roundImg" [src]="imgPath" width="40px"
+             height="40px">&nbsp;<span><b style="color: white;">PardhaSaradhi </b></span>
+        </p>
+        <!-- <a *ngFor="let item of MenuList" [routerLink]="item.href" routerLinkActive="active">
             <i class="{{item.iconText}}"></i>
             <span class="ml-2">{{item.name}}</span>
+        </a> -->
+
+ 
+        <a routerLink="home" routerLinkActive="active">
+            <i class="fas fa-home"></i>
+            <span class="ml-2">Home</span>
         </a>
+        <a (click)='sale=!sale' routerLinkActive="active" >
+            <i class="fas fa-gas-pump"></i>
+            <span class="ml-2" class="dropdown-toggle">Sales</span></a>
+            <div class="sales" *ngIf='sale' >
+                <li routerLink="sales"  routerLinkActive='active'><a>sale1</a></li>
+                
+            </div>
+        
+        <a routerLink="" routerLinkActive="active">
+            <i class="fas fa-file-contract"></i>
+            <span class="ml-2">Accounts</span>
+        </a>
+        <a routerLink="" routerLinkActive="active">
+            <i class="fas fa-tachometer-alt"></i>
+            <span class="ml-2">Shifts</span>
+        </a>
+        <a routerLink="" routerLinkActive="active">
+            <i class="fas fa-th"></i>
+            <span class="ml-2">Dashboard</span>
+        </a>
+        <a routerLink="" routerLinkActive="active">
+            <i class="fas fa-users"></i>
+            <span class="ml-2">User Management</span>
+        </a>
+
     </div>
+    <br><br><br>
     <router-outlet></router-outlet>
 </div>
+<!-- 
+<a routerLink="home" routerLinkActive="active">
+    <i class="fas fa-home"></i>
+    <span class="ml-2">Home</span>
+</a>
+<a routerLink="sales" routerLinkActive="active">
+    <i class="fas fa-home"></i>
+    <span class="ml-2">Sales</span>
+</a>
+<a routerLink="" routerLinkActive="active">
+    <i class="fas fa-home"></i>
+    <span class="ml-2">Accounts</span>
+</a>
+<a routerLink="" routerLinkActive="active">
+    <i class="fas fa-home"></i>
+    <span class="ml-2">Shifts</span>
+</a>
+<a routerLink="" routerLinkActive="active">
+    <i class="fas fa-home"></i>
+    <span class="ml-2">Dashboard</span>
+</a>
+<a routerLink="" routerLinkActive="active">
+    <i class="fas fa-home"></i>
+    <span class="ml-2">User Management</span>
+</a> -->

@@ -1,0 +1,382 @@
+<div class="container">
+
+    
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Sales
+
+        </h1>
+        <ol class="breadcrumb pull-right">
+            <li><a routerLink='../home'><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active" id='sales'>Sales</li>
+        </ol>
+    </section>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <label for="fname">Sale Date</label>
+        </div>
+        <div class="col-lg-3">
+            <input type="date">
+        </div>
+    </div>
+
+    <section class="content">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="box-body">
+                <!-- small box -->
+                <table class="table table-bordered userTable1">
+                    <tr>
+                  
+                            <th style="width: 10px">#</th>
+                        <th>Name</th>
+                        <th>Shift</th>
+                        <th>Pump</th>
+                        <th>Nozzle</th>
+                         <th>Total Sales</th>
+                        <th style="width: 40px">Action</th>
+                        
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>Ramana</td>
+                        <td>Shift-1</td>
+                        <td>Pump-1</td>
+                        <td>Nozzle-1</td>
+                        <td>1,00,000</td>
+                        <td> <input type="submit" value="Delete"></td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Krishna</td>
+                        <td>Shift-2</td>
+                        <td>Pump-2</td>
+                        <td>Nozzle-1</td>
+                        <td>20,000</td>
+                        <td> <input type="submit" value="Delete"></td>
+                    </tr>
+                    <tr>
+                       <td>3.</td>
+                        <td>Prasad</td>
+                        <td>Shift-2, Shift-3</td>
+                        <td>Pump-1</td>
+                        <td>Nozzle-1</td>
+                        <td>70,000</td>
+                        <td> <input type="submit" value="Delete"></td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Ramesh</td>
+                        <td>Shift-3</td>
+                        <td>Pump-1</td>
+                        <td>Nozzle-1</td>
+                        <td>1,00,000</td>
+                        <td> <input type="submit" value="Delete"></td>
+                    </tr>
+                </table>
+                <div class="clearfix">
+                   <input type="submit" value="Add Sale"> <ul class="pagination pagination-sm no-margin pull-right">
+                        <li><a href="#">&laquo;</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- ./col -->
+
+        </div>
+    </section>
+
+    <div class="divContainer">
+     
+            <div class="row">
+                <div class="col-lg-3">
+                    <label for="fname">Primary Person</label>
+                </div>
+                <div class="col-lg-3">
+                    <input type="text" id="lname" name="lastname"  >
+                </div>
+                <div class="col-lg-3">
+                    <label for="fname">Secondary Person</label>
+                </div>
+                <div class="col-lg-3">
+                    <input type="text" id="lname" name="lastname"  >
+                </div>
+                
+                 
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <label for="fname">Shift</label>
+                </div>
+                <div class="col-lg-3">
+                    <select id="country" name="country" multiple>
+                        <option value="australia">Shift-1</option>
+                        <option value="canada">Shift-2</option>
+                        <option value="usa">Shift-3</option>
+                      </select>
+                </div>
+                
+                <div class="col-lg-3">
+                    <label for="fname">Pump</label>
+                </div>
+                <div class="col-lg-3">
+                    <select id="country" multiple>
+                        <option value="australia">Pump-1</option>
+                        <option value="canada">Pump-2</option>
+                        <option value="usa">Pump-3</option>
+                        <option value="usa">Pump-4</option>
+                      </select>
+                </div>
+                
+            </div>
+
+            <div class="row">
+              
+                
+                <div class="col-lg-3">
+                    <label for="fname">Nozzle</label>
+                </div>
+                <div class="col-lg-3">
+                    <select id="country" multiple>
+                        <option value="australia">Nozzle-1</option>
+                        <option value="canada">Nozzle-2</option>
+                        <option value="usa">Nozzle-3</option>
+                        <option value="usa">Nozzle-4</option>
+                      </select>
+                </div>
+                
+            </div>
+      
+      
+    </div>
+
+    <section class="content">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="box-body">
+                <!-- small box -->
+                <table class="table table-bordered userTable">
+                    <tr>
+                        <th style="width: 10px">#</th>
+                        <th>Pump</th>
+                        <th>Nozzle</th>
+                        <th>Product</th>
+                        <th>Opening Balance</th>
+                        <th>Closing Balance</th>
+                        <th>Testing</th>
+                        <th>Sale Fuel Qty</th>
+                        <th>Ltr Price</th>
+                        <th>Sales</th>
+                        <th style="width: 40px">Action</th>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>Pump-1</td>
+                        <td>Nozzle-1</td>
+                        <td>Petrol</td>
+                        <td>10000</td>
+                        <th><input type="text" ></th>
+                        <td>5</td>
+                        <td>1000</td>
+                        <td>70</td>
+                        <td>5000</td>
+                        <td> <input type="submit" value="Delete"></td>
+                    </tr>
+                     <tr>
+                        <td>2.</td>
+                        <td>Pump-1</td>
+                        <td>Nozzle-2</td>
+                        <td>Diesel</td>
+                        <td>10000</td>
+                        <th><input type="text" ></th>
+                        <td>5</td>
+                        <td>1000</td>
+                        <td>70</td>
+                        <td>5000</td>
+                        <td> <input type="submit" value="Delete"></td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Pump-1</td>
+                        <td>Nozzle-3</td>
+                        <td>Diesel</td>
+                        <td>10000</td>
+                        <th><input type="text" ></th>
+                        <td>5</td>
+                        <td>1000</td>
+                        <td>70</td>
+                        <td>5000</td>
+                        <td> <input type="submit" value="Delete"></td>
+                    </tr>
+                     <tr>
+                        <td>4.</td>
+                        <td>Pump-1</td>
+                        <td>Nozzle-4</td>
+                        <td>Diesel</td>
+                        <td>10000</td>
+                        <th><input type="text" ></th>
+                        <td>5</td>
+                        <td>1000</td>
+                        <td>70</td>
+                        <td>5000</td>
+                        <td> <input type="submit" value="Delete"></td>
+                    </tr>
+                </table>
+                <div class="clearfix">
+                  <input type="submit" value="Add">  <ul class="pagination pagination-sm no-margin pull-right">
+                        <li><a href="#">&laquo;</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- ./col -->
+
+        </div>
+    </section>
+
+
+
+    <div class="divContainer1">
+        
+            <div class="row">
+                <div class="col-lg-3">
+                    <label for="fname">Total Fuel Amount</label>
+                </div>
+                <div class="col-lg-2">
+                <input type="text" id="fname" name="firstname" value="1,00,000">
+                </div>
+           
+           
+                <div class="col-lg-3">
+                    <label for="lname">Company Card</label>
+                </div>
+                <div class="col-lg-2">
+                    <input type="text" id="lname" name="lastname"  >
+    
+                </div>
+                <div class="col-lg-1">
+                    <input type="submit" value="Enter">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3">
+                    <label for="fname">Cash Payment</label>
+                </div>
+                <div class="col-lg-2">
+                <input type="text" id="fname" name="firstname" >
+                </div>
+           
+           
+                <div class="col-lg-3">
+                    <label for="lname">Credit Sale</label>
+                </div>
+                <div class="col-lg-2">
+                    <input type="text" id="lname" name="lastname"  >
+    
+                </div>
+                <div class="col-lg-1">
+                    <input type="submit" value="Enter">
+                </div>
+            </div>
+
+            
+            <div class="row">
+                <div class="col-lg-3">
+                    <label for="fname">Card Payment</label>
+                </div>
+                <div class="col-lg-2">
+                <input type="text" id="fname" name="firstname" >
+                </div>
+           
+           
+                <div class="col-lg-3">
+                    <label for="lname">Wallet Payment</label>
+                </div>
+                <div class="col-lg-2">
+                    <input type="text" id="lname" name="lastname"  >
+    
+                </div>
+                <div class="col-lg-1">
+                    <input type="submit" value="Enter">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <label for="fname">Bank Card</label>
+                </div>
+                <div class="col-lg-2">
+                <input type="text" id="fname" name="firstname" >
+                </div>
+           
+           
+                <div class="col-lg-3">
+                    <label for="lname">Expenses</label>
+                </div>
+                <div class="col-lg-2">
+                    <input type="text" id="lname" name="lastname"  >
+    
+                </div>
+                <div class="col-lg-1">
+                    <input type="submit" value="Enter">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <label for="fname">Balance Short</label>
+                </div>
+                <div class="col-lg-2">
+                <input type="text" id="fname" name="firstname" >
+                </div>
+           
+           
+                <div class="col-lg-3">
+                    <label for="lname">Total</label>
+                </div>
+                <div class="col-lg-2">
+                    <input type="text" id="lname" name="lastname"  >
+    
+                </div>
+                <div class="col-lg-1">
+                    <input type="submit" value="Enter">
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="col-lg-3">
+                    <label for="country">Allow SMS Notification</label>
+                </div>
+                <div class="col-lg-3">
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                </div>
+                <div class="col-lg-3">
+                    <input type="submit" value="Save">
+                </div>
+            </div>
+            <footer class="bg-light main-footer" >
+               
+                <strong> &nbsp;Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
+            
+                <span class=" hidden-xs">
+                    <b class="pull-right">Version 2.0 </b> 
+                </span>
+            
+            </footer>
+    </div>
+
+</div>
+
+

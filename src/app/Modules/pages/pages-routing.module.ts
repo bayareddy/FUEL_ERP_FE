@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SalesComponent } from './sales/sales.component';
 
 
 const routes: Routes = [
@@ -21,10 +22,12 @@ const routes: Routes = [
     component: SignupComponent
   },
   {
-    path: 'home',
+    path: 'success',
     component: NavbarComponent,
     children: [
-      {path:'', component:HomeComponent}
+      {path:'', component:HomeComponent},
+      {path:'home',component:HomeComponent},
+      {path:'sales', component:SalesComponent}
     ]
   },
 

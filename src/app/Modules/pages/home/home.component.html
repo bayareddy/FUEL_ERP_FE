@@ -1,5 +1,32 @@
-<div class="container-fluid h-100">
-    <div class="row h-100 justify-content-center align-items-center">
-        <h1 class="mt-7">Welcome to Home Page</h1>
+ 
+ <h1 (click)='nav=!nav'>click</h1>
+ 
+ <div class="hideNav" [ngClass]='nav ? "showNav":""'>
+  <div class="container">
+    <div class="mains">
+      <li  class="main" (click)='names=!names'>Names {{names ? '-':'+'}}</li>
+      <div class="sub" *ngIf='names'>
+        <li>Name</li>
+        <li>Name</li>
+        <li>Name</li>
+      </div>
+      
+  
+      <li class="main" (click)='class=!class'>Classes {{class ? '-':'+'}}</li>
+      <div class="sub" *ngIf='class'>
+        <li>Class</li>
+        <li>Class</li>
+        <li>Class</li>
+      </div>
+  
+  
+      <li class="main" (click)='bunk=!bunk'>Bunk {{bunk ? '-':'+'}}</li>
+      <div class="sub" *ngIf='bunk'>
+        <li>Bunks</li>
+        <li>Bunks</li>
+        <li>Bumks</li>
+      </div>
     </div>
+    
+  </div>
 </div>

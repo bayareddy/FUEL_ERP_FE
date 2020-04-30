@@ -8,10 +8,11 @@ import { HomeComponent } from './home/home.component';
 import {ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MaterialModule } from 'src/app/material-module';
+import { SalesComponent } from './sales/sales.component';
 
 
 @NgModule({
-  declarations: [LoginComponent, SignupComponent, HomeComponent, NavbarComponent],
+  declarations: [LoginComponent, SignupComponent, HomeComponent, NavbarComponent, SalesComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,
