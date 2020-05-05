@@ -31,21 +31,7 @@ export class LoginComponent implements OnInit {
     this.submitted = true;
     if (this.loginForm.invalid) {
       return;
-<<<<<<< HEAD
     };
     this.router.navigate(['success']);
-=======
-    }
-    else {
-      this.apiService.login(this.loginForm.value).subscribe(data => {
-        console.log("1111",data)
-        localStorage.setItem('userToken', data);
-        this.router.navigate(['main/home']);
-      },(error:HttpErrorResponse)=>{
-        this.loginError = true;
-      })
-    }
-    this.router.navigate(['main/home']);
->>>>>>> 0ef4afd140262038c8aefd44aeafc022c35e2ee7
   }
 }
