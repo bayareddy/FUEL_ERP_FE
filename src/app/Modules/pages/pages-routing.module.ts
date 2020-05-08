@@ -5,7 +5,16 @@ import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SalesComponent } from './sales/sales.component';
-
+import { ProductComponent } from './Admin/product/product.component';
+import { RoleComponent } from './Admin/role/role.component';
+import { SupplierComponent } from './Admin/supplier/supplier.component';
+import { UserComponent } from './Admin/user/user.component';
+import { CreditCustomerComponent } from './Admin/credit-customer/credit-customer.component';
+import { SwipingComponent } from './sales/swiping/swiping.component';
+import { CheckPaymentComponent } from './sales/check-payment/check-payment.component';
+import { WalletPaymentComponent } from './sales/wallet-payment/wallet-payment.component';
+import { TankComponent } from './Master/tank/tank.component';
+import { PumpNozzleComponent } from './Master/pump-nozzle/pump-nozzle.component';
 
 const routes: Routes = [
   {
@@ -25,9 +34,20 @@ const routes: Routes = [
     path: 'success',
     component: NavbarComponent,
     children: [
-      {path:'', component:HomeComponent},
-      {path:'home',component:HomeComponent},
-      {path:'sales', component:SalesComponent}
+      { path: '', component: HomeComponent },
+      { path: 'home', component: HomeComponent },
+      { path: 'sales', component: SalesComponent },
+      { path: 'swipe', component: SwipingComponent },
+      { path: 'check', component: CheckPaymentComponent },
+      { path: 'wallet', component: WalletPaymentComponent },
+      { path: 'credit-customer', component: CreditCustomerComponent },
+      { path: 'product', component: ProductComponent },
+      { path: 'role', component: RoleComponent },
+      { path: 'supplier', component: SupplierComponent },
+      { path: 'user', component: UserComponent },
+      { path: 'tank', component: TankComponent },
+      { path: 'pumpnozzle', component: PumpNozzleComponent },
+      
     ]
   },
 

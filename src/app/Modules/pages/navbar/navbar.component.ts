@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
   zoom ;
   down ;
-  sale ;
+  sale ;admin; master;
+
   imgPath='https://pbs.twimg.com/profile_images/864282616597405701/M-FEJMZ0_400x400.jpg';
   openSideNav:boolean = false;
   MenuList:any = [{name:'Home', href:'home', iconText:'fas fa-home'},

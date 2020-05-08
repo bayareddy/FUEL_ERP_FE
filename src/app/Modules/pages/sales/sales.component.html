@@ -46,7 +46,8 @@
                         <td>Pump-1</td>
                         <td>Nozzle-1</td>
                         <td>1,00,000</td>
-                        <td> <input type="submit" value="Delete"></td>
+                        <td>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
+                            
                     </tr>
                     <tr>
                         <td>2.</td>
@@ -55,7 +56,8 @@
                         <td>Pump-2</td>
                         <td>Nozzle-1</td>
                         <td>20,000</td>
-                        <td> <input type="submit" value="Delete"></td>
+                         <td>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
+                            
                     </tr>
                     <tr>
                        <td>3.</td>
@@ -64,7 +66,8 @@
                         <td>Pump-1</td>
                         <td>Nozzle-1</td>
                         <td>70,000</td>
-                        <td> <input type="submit" value="Delete"></td>
+                        <td>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
+                            
                     </tr>
                     <tr>
                         <td>4.</td>
@@ -73,7 +76,8 @@
                         <td>Pump-1</td>
                         <td>Nozzle-1</td>
                         <td>1,00,000</td>
-                        <td> <input type="submit" value="Delete"></td>
+                        <td>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
+                            
                     </tr>
                 </table>
                 <div class="clearfix">
@@ -181,12 +185,13 @@
                         <td>Nozzle-1</td>
                         <td>Petrol</td>
                         <td>10000</td>
-                        <th><input type="text" ></th>
+                        <td>2000</td>
                         <td>5</td>
                         <td>1000</td>
                         <td>70</td>
                         <td>5000</td>
-                        <td> <input type="submit" value="Delete"></td>
+                        <td>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
+                            
                     </tr>
                      <tr>
                         <td>2.</td>
@@ -194,12 +199,13 @@
                         <td>Nozzle-2</td>
                         <td>Diesel</td>
                         <td>10000</td>
-                        <th><input type="text" ></th>
+                        <td>2000</td>
                         <td>5</td>
                         <td>1000</td>
                         <td>70</td>
                         <td>5000</td>
-                        <td> <input type="submit" value="Delete"></td>
+                        <td>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
+                            
                     </tr>
                     <tr>
                         <td>3.</td>
@@ -207,12 +213,13 @@
                         <td>Nozzle-3</td>
                         <td>Diesel</td>
                         <td>10000</td>
-                        <th><input type="text" ></th>
+                        <td>2000</td>
                         <td>5</td>
                         <td>1000</td>
                         <td>70</td>
                         <td>5000</td>
-                        <td> <input type="submit" value="Delete"></td>
+                        <td>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
+                            
                     </tr>
                      <tr>
                         <td>4.</td>
@@ -220,12 +227,13 @@
                         <td>Nozzle-4</td>
                         <td>Diesel</td>
                         <td>10000</td>
-                        <th><input type="text" ></th>
+                        <td>2000</td>
                         <td>5</td>
                         <td>1000</td>
                         <td>70</td>
                         <td>5000</td>
-                        <td> <input type="submit" value="Delete"></td>
+                        <td>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
+                            
                     </tr>
                 </table>
                 <div class="clearfix">
@@ -257,26 +265,20 @@
            
            
                 <div class="col-lg-3">
-                    <label for="lname">Company Card</label>
+                    <label for="lname"> Card Payment</label>
                 </div>
                 <div class="col-lg-2">
                     <input type="text" id="lname" name="lastname"  >
     
                 </div>
                 <div class="col-lg-1">
-                    <input type="submit" value="Enter">
+                    <button routerLink='../swipe' class="btn btn-outline-success btn-sm">Enter</button>
                 </div>
+              
             </div>
             
             <div class="row">
-                <div class="col-lg-3">
-                    <label for="fname">Cash Payment</label>
-                </div>
-                <div class="col-lg-2">
-                <input type="text" id="fname" name="firstname" >
-                </div>
-           
-           
+               
                 <div class="col-lg-3">
                     <label for="lname">Credit Sale</label>
                 </div>
@@ -284,15 +286,23 @@
                     <input type="text" id="lname" name="lastname"  >
     
                 </div>
+
+                <div class="col-lg-3">
+                    <label for="fname">Cash Payment</label>
+                </div>
+                <div class="col-lg-2">
+                <input type="text" id="fname" name="firstname" >
+                </div>
+
                 <div class="col-lg-1">
-                    <input type="submit" value="Enter">
+                    <button routerLink='../check' class="btn btn-outline-success btn-sm">Enter</button>
                 </div>
             </div>
 
             
             <div class="row">
                 <div class="col-lg-3">
-                    <label for="fname">Card Payment</label>
+                    <label for="fname">Company Card</label>
                 </div>
                 <div class="col-lg-2">
                 <input type="text" id="fname" name="firstname" >
@@ -307,7 +317,7 @@
     
                 </div>
                 <div class="col-lg-1">
-                    <input type="submit" value="Enter">
+                    <button routerLink='../wallet' class="btn btn-outline-success btn-sm">Enter</button>
                 </div>
             </div>
             <div class="row">
@@ -327,7 +337,7 @@
     
                 </div>
                 <div class="col-lg-1">
-                    <input type="submit" value="Enter">
+                    <button class="btn btn-outline-success btn-sm">Enter</button>
                 </div>
             </div>
             <div class="row">
@@ -343,11 +353,11 @@
                     <label for="lname">Total</label>
                 </div>
                 <div class="col-lg-2">
-                    <input type="text" id="lname" name="lastname"  >
+                 <input type="text" value="1,00,000" >
     
                 </div>
                 <div class="col-lg-1">
-                    <input type="submit" value="Enter">
+                   
                 </div>
             </div>
            
@@ -366,17 +376,12 @@
                     <input type="submit" value="Save">
                 </div>
             </div>
-            <footer class="bg-light main-footer" >
-               
-                <strong> &nbsp;Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
-            
-                <span class=" hidden-xs">
-                    <b class="pull-right">Version 2.0 </b> 
-                </span>
-            
-            </footer>
+           
     </div>
 
 </div>
+
+
+
 
 
