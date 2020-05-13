@@ -1,32 +1,32 @@
- 
- <h1 (click)='nav=!nav'>click</h1>
- 
- <div class="hideNav" [ngClass]='nav ? "showNav":""'>
-  <div class="container">
-    <div class="mains">
-      <li  class="main" (click)='names=!names'>Names {{names ? '-':'+'}}</li>
-      <div class="sub" *ngIf='names'>
-        <li>Name</li>
-        <li>Name</li>
-        <li>Name</li>
-      </div>
+<div class="container">
+  <h2>Modal Example</h2>
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Open modal
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
       
-  
-      <li class="main" (click)='class=!class'>Classes {{class ? '-':'+'}}</li>
-      <div class="sub" *ngIf='class'>
-        <li>Class</li>
-        <li>Class</li>
-        <li>Class</li>
-      </div>
-  
-  
-      <li class="main" (click)='bunk=!bunk'>Bunk {{bunk ? '-':'+'}}</li>
-      <div class="sub" *ngIf='bunk'>
-        <li>Bunks</li>
-        <li>Bunks</li>
-        <li>Bumks</li>
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
       </div>
     </div>
-    
   </div>
-</div>
+  

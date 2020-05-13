@@ -16,15 +16,18 @@ import { ProductComponent } from './Admin/product/product.component';
 import { RoleComponent } from './Admin/role/role.component';
 import { SupplierComponent } from './Admin/supplier/supplier.component';
 import { CreditCustomerComponent } from './Admin/credit-customer/credit-customer.component';
-import { SwipingComponent } from './sales/swiping/swiping.component';
-import { CheckPaymentComponent } from './sales/check-payment/check-payment.component';
-import { WalletPaymentComponent } from './sales/wallet-payment/wallet-payment.component';
+
 import { TankComponent } from './Master/tank/tank.component';
 import { PumpNozzleComponent } from './Master/pump-nozzle/pump-nozzle.component';
 
 
 @NgModule({
-  declarations: [LoginComponent, SignupComponent, HomeComponent, NavbarComponent, SalesComponent, UserComponent, ProductComponent, RoleComponent, SupplierComponent, CreditCustomerComponent, SwipingComponent, CheckPaymentComponent, WalletPaymentComponent, TankComponent, PumpNozzleComponent],
+  declarations: [LoginComponent, 
+    SignupComponent, HomeComponent,
+     NavbarComponent, SalesComponent,
+      UserComponent, ProductComponent,
+       RoleComponent, SupplierComponent, 
+       CreditCustomerComponent, TankComponent, PumpNozzleComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,

@@ -1,7 +1,11 @@
 
 
 th{
-    background-color: rgb(76, 110, 221);
+    
+    background-color: rgb(227, 241, 241);
+}
+td{
+    background-color: rgb(255, 255, 255);;
 }
 table,td,th{
     border: 1px solid black;
@@ -9,8 +13,8 @@ table,td,th{
 
 
     .userTable {
-        width: 90%;
-        margin-left: 55px;
+        width: 110%;
+        margin-left: 15px;
     }
     
     .userTable tbody tr th {
@@ -18,13 +22,10 @@ table,td,th{
         /* text-align: center; */
     }
 
-    .th{
-        background-color: red;
-    }
-    
+   
     .userTable tbody tr td {
         /* text-align: center; */
-        width: 8%;
+        width: 12%;
     }
     
     
@@ -36,6 +37,9 @@ table,td,th{
         width: 2%;
     }
 
+    .forTh>th{
+        background-color: rgb(227, 241, 241);
+    }
 
 
     

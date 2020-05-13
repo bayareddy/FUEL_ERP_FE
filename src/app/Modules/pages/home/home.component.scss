@@ -1,52 +1,11 @@
-li{
-  list-style: none;
-  transition: 0.5s;
-  padding: 5px;
+.wrap { padding: 15px; }
+h1 { font-size: 28px; }
+h4,
+modal-title { font-size: 18px; font-weight: bold; }
 
-  
- 
-}
-li.main { border-bottom:2px solid black;
-  transition: 5s;
-}
-li:hover{
-  background-color: blue;
-  
-}
-.sub{
-  transition: 0.5s;
-  margin-left: 5px;
-  transition: 5s;
-}
-.container{
-  margin-top: 15px;
-  background: white;
-  width: fit-content;
-  border: 2px solid red;
-  border-radius: 15%;
-  background-color: rgb(47, 196, 18);
-  color: white;
-  margin-left: 60px;
-  transition: 5s;
-
-  
-}
-
-
-.hideNav{
-width: 0%;
-height: 0%;
-overflow: hidden;
-
-display: none;
-
-}
-
-.showNav{
-  width: 100%;
-  height: 100%;
-  display: inline;
-  flex-wrap: wrap;
-  position: fixed;
-  transition: 1.1s;
-}
+.no-borders { border: 0px; }
+.body-message { font-size: 18px; }
+.centered { text-align: center; }
+.btn-primary { background-color: #2086c1; border-color: transparent; outline: none; border-radius: 8px; font-size: 15px; padding: 10px 25px; }
+.btn-primary:hover { background-color: #2086c1; border-color: transparent; }
+.btn-primary:focus { outline: none; }
