@@ -1,24 +1,20 @@
-<div class="container">
+<!-- <div class="container">
 
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
                 Roles
-    
+
             </h1>
             <ol class="breadcrumb pull-right">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
                 <li class="active">Roles</li>
             </ol>
         </section>
-    
-        <!-- Main content -->
+
         <section class="content">
-            <!-- Small boxes (Stat box) -->
             <div class="row">
                 <div class="box-body">
-                    <!-- small box -->
                     <table class="table table-bordered userTable">
                         <tr>
                             <th style="width: 10px">#</th>
@@ -33,7 +29,7 @@
                                 Manager
                             </td>
                             <td><i style="color: green;" class="fas fa-edit"></i>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
-                            
+
                         </tr>
                         <tr>
                             <td>2.</td>
@@ -42,7 +38,7 @@
                                 Senior Manager
                             </td>
                             <td><i style="color: green;" class="fas fa-edit"></i>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
-                            
+
                         </tr>
                         <tr>
                             <td>3.</td>
@@ -50,7 +46,7 @@
                             <td>Sales Man
                             </td>
                             <td><i style="color: green;" class="fas fa-edit"></i>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
-                            
+
                         </tr>
                         <tr>
                             <td>4.</td>
@@ -59,7 +55,7 @@
                                 Sales Man
                             </td>
                             <td><i style="color: green;" class="fas fa-edit"></i>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
-                            
+
                         </tr>
                     </table>
                     <div class="clearfix">
@@ -72,62 +68,114 @@
                         </ul>
                     </div>
                 </div>
-                <!-- ./col -->
-    
+
             </div>
         </section>
-        <!-- /.row -->
         <section class="content-header">
             <h1>
                 New Role
-    
+
             </h1>
-    
+
         </section>
         <div class="divContainer">
-         
-                <div class="row">
-                    <div class="col-25">
-                        <label for="fname">Name</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                    </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">Name</label>
                 </div>
-                
-    
-                <div class="row">
-                    <div class="col-25">
-                        <label for="subject">Description</label>
-                    </div>
-                    <div class="col-75">
-                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
-                    </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
                 </div>
-                
-                <div class="row">
-                    <div class="col-25">
-                        <label for="country">Allow SMS Notification</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="checkbox">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="country">Allow Mail Notification</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="checkbox">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                    </div>
-                    <div class="col-75">
-                        <input type="submit" value="Save">
-                    </div>
-                </div>
-         
             </div>
+
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject">Description</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="country">Allow SMS Notification</label>
+                </div>
+                <div class="col-75">
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="country">Allow Mail Notification</label>
+                </div>
+                <div class="col-75">
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                </div>
+                <div class="col-75">
+                    <input type="submit" value="Save">
+                </div>
+            </div>
+
+        </div>
+    </div> -->
+
+<div class="container-fluid">
+    <div class="offset-md-2 col-md-8 col-lg-8 offset-lg-2">
+        <h1 class="mt-3">Roles</h1>
+        <div class="col-12 mb-5">
+            <table class="table table-bordered tableTextCenter tableBgClr tableShadow tableHover">
+                <thead>
+                    <tr>
+                        <th *ngFor="let table_head of table_head_list">{{table_head}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of table_data; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{data.roleName}}</td>
+                        <td>{{data.description}}</td>
+                        <td>
+                            <i class="fas fa-edit cursor-pointer clr-gray" matTooltip="Edit"></i>&nbsp;&nbsp;&nbsp;
+                            <i class="fas fa-trash cursor-pointer clr-gray" matTooltip="Delete"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h1>New Role</h1>
+        <div class="divContainer form-group row">
+            <div class="col-md-2 mb-3">
+                <label for="roleName" class="mt-10 ">Role Name</label>
+            </div>
+            <div class="col-md-4 mb-3">
+                <input type="text" placeholder="Enter Role Name" class="form-control" id="roleName" name="roleName">
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="description" class="mt-10 ">Description</label>
+            </div>
+            <div class="col-md-4 mb-3">
+                <textarea placeholder="Enter Description" class="form-control" id="description" name="description"></textarea>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="smsNotify" class="mt-10 ">Allow SMS Notifications</label>
+                <input type="checkbox" id="smsNotify" name="smsNotify" class="mt-3 ml-3">
+            </div>
+            <div class="col-md-3 mb-3">
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="mailNotify" class="mt-10 ">Allow Mail Notifications</label>
+                <input type="checkbox" id="mailNotify" name="mailNotify" class="mt-3 ml-3">
+            </div>
+            <div class="col-md-3 mb-3">
+            </div>
+            <button class="offset-6 btn btn-primary">Save</button>
+        </div>
     </div>
+</div>

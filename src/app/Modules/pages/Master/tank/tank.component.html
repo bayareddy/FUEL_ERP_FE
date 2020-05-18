@@ -1,39 +1,62 @@
-<div class="container">
+<!-- <div class="container">
 
     <h1 style="font-family: cursive;">Tank</h1>
 
-    <table  style="width: 50%; margin-left: 20%;" class="table table-bordered userTable">
+    <table style="width: 50%; margin-left: 20%;" class="table table-bordered userTable">
         <tr>
-      
-               
+
+
             <th>S.NO</th>
             <th>Name</th>
             <th>Product</th>
             <th>DipReading</th>
-           
-            
+
+
         </tr>
         <tr>
             <td>1.</td>
             <td>MMID1</td>
-           <td>10000</td>
-           <td>90</td>
+            <td>10000</td>
+            <td>90</td>
         </tr>
         <tr>
             <td>2.</td>
             <td>MMID2</td>
             <td>20000</td>
             <td>80</td>
-           
+
         </tr>
         <tr>
             <td>3.</td>
             <td>MMID3</td>
             <td>30000</td>
             <td>50</td>
-           
+
         </tr>
-       
+
     </table>
 
+</div> -->
+
+<div class="container-fluid">
+    <div class="offset-md-2 col-md-8 col-lg-8 offset-lg-2">
+        <h1 class="mt-3">Tank</h1>
+        <div class="col-12 mb-5">
+            <table class="table table-bordered tableTextCenter tableBgClr tableShadow tableHover">
+                <thead>
+                    <tr>
+                        <th *ngFor="let table_head of table_head_list">{{table_head}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of table_data; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{data.name}}</td>
+                        <td>{{data.product}}</td>
+                        <td>{{data.dipReading}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

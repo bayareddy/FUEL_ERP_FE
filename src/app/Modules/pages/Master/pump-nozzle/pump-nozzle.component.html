@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
 
     <h2 style="font-family: cursive;">Pump & Nozzle</h2>
 
@@ -57,4 +57,32 @@
        
     </table>
 
+</div> -->
+
+
+<div class="container-fluid">
+    <div class="offset-md-2 col-md-8 col-lg-8 offset-lg-2">
+        <h1 class="mt-3">Pump & Nozzle</h1>
+        <div class="col-12 mb-5">
+            <table class="table table-bordered tableTextCenter tableBgClr tableShadow tableHover">
+                <thead>
+                    <tr>
+                        <th *ngFor="let table_head of table_head_list">{{table_head}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of table_data; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{data.pump}}</td>
+                        <td>
+                            <span *ngFor="let nozzole of data.nozzles" class="display-block">{{nozzole}}</span>
+                        </td>
+                        <td>
+                            <span *ngFor="let product of data.products" class="display-block">{{product}}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

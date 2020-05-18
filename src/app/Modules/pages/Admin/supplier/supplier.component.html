@@ -1,7 +1,6 @@
-<div class="container">
+<!-- <div class="container">
 
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
                 Supplier
@@ -13,21 +12,18 @@
             </ol>
         </section>
 
-        <!-- Main content -->
         <section class="content">
-            <!-- Small boxes (Stat box) -->
             <div class="row">
                 <div class="box-body">
-                    <!-- small box -->
                     <table class="table table-bordered userTable">
                         <tr>
                             <th style="width: 10px">#</th>
                             <th>Name</th>
                             <th>Contact Details</th>
                             <th style="width: 40px">Contact Person Name</th>
-                             <th style="width: 40px">Mobile No</th>
-                              <th style="width: 40px">Tale Fax</th>
-                               <th style="width: 40px">E-Mail</th>
+                            <th style="width: 40px">Mobile No</th>
+                            <th style="width: 40px">Tale Fax</th>
+                            <th style="width: 40px">E-Mail</th>
                             <th style="width: 40px">Action</th>
                         </tr>
                         <tr>
@@ -41,10 +37,10 @@
                             <td>123456</td>
                             <td>nandha@gmail.com</td>
                             <td><i style="color: green;" class="fas fa-edit"></i>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
-                            
+
                         </tr>
-                      
-                        
+
+
                     </table>
                     <div class="clearfix">
                         <ul class="pagination pagination-sm no-margin pull-right">
@@ -56,11 +52,9 @@
                         </ul>
                     </div>
                 </div>
-                <!-- ./col -->
 
             </div>
         </section>
-        <!-- /.row -->
         <section class="content-header">
             <h1>
                 New Supplier
@@ -69,66 +63,138 @@
 
         </section>
         <div class="divContainer">
-           
-                <div class="row">
-                    <div class="col-md-3">
-                        <label for="fname">Name</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                    </div>
-              
-               
-                    <div class="col-md-3">
-                        <label for="fname">Contact Person Name</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="fname" name="firstname" placeholder="">
-                    </div>
-                 
+
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="fname">Name</label>
                 </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <label for="fname">Mobile No</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="fname" name="firstname" placeholder="">
-                    </div>
-                
-                    <div class="col-md-3">
-                        <label for="fname">Tale Fax</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="fname" name="firstname" placeholder="">
-                    </div>
+                <div class="col-md-3">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
                 </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <label for="fname">Email</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="text" id="fname" name="firstname" placeholder="">
-                    </div>
-              
+
+
+                <div class="col-md-3">
+                    <label for="fname">Contact Person Name</label>
                 </div>
-                <div class="row">
+                <div class="col-md-3">
+                    <input type="text" id="fname" name="firstname" placeholder="">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="fname">Mobile No</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="fname" name="firstname" placeholder="">
+                </div>
+
+                <div class="col-md-3">
+                    <label for="fname">Tale Fax</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="fname" name="firstname" placeholder="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="fname">Email</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="fname" name="firstname" placeholder="">
+                </div>
+
+            </div>
+            <div class="row">
                 <div class="col-md-3">
                     <label for="subject">Address</label>
                 </div>
                 <div class="col-md-3">
                     <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
                 </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
                 </div>
-      
-                <div class="row">
-                    <div class="col-md-3">
-                    </div>
-                    <div class="col-md-3">
-                        <input type="submit" value="Save">
-                    </div>
+                <div class="col-md-3">
+                    <input type="submit" value="Save">
                 </div>
-          
+            </div>
+
         </div>
 
 
+    </div> -->
+
+
+
+<div class="container-fluid">
+    <div class="offset-md-2 col-md-8 col-lg-8 offset-lg-2">
+        <h1 class="mt-3">Suppliers</h1>
+        <div class="col-12 mb-5">
+            <table class="table table-bordered tableTextCenter tableBgClr tableShadow tableHover">
+                <thead>
+                    <tr>
+                        <th *ngFor="let table_head of table_head_list">{{table_head}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of table_data; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{data.supplierName}}</td>
+                        <td>{{data.contactpersonName}}</td>
+                        <td>{{data.mobileNo}}</td>
+                        <td>{{data.emailId}}</td>
+                        <td>{{data.taleFax}}</td>
+                        <td>{{data.address}}</td>
+                        <td>
+                            <i class="fas fa-edit cursor-pointer clr-gray" matTooltip="Edit"></i>&nbsp;&nbsp;&nbsp;
+                            <i class="fas fa-trash cursor-pointer clr-gray" matTooltip="Delete"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h1>New Supplier</h1>
+        <div class="divContainer form-group row">
+            <div class="col-md-2 mb-3">
+                <label for="supplierName" class="mt-10 ml-4">Supplier Name</label>
+            </div>
+            <div class="col-md-4 mb-3">
+                <input type="text" placeholder="Enter Supplier Name" class="form-control" id="supplierName" name="supplierName">
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="contactPersonName" class="mt-10 ml-4">Contact Person Name</label>
+            </div>
+            <div class="col-md-4 mb-3">
+                <input type="text" placeholder="Enter Contact Person Name" class="form-control" id="contactPersonName" name="contactPersonName">
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="mobileNo" class="mt-10 ml-4">Mobile No</label>
+            </div>
+            <div class="col-md-4 mb-3">
+                <input type="text" placeholder="Enter Mobile No" class="form-control" id="mobileNo" name="mobileNo">
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="emailId" class="mt-10 ml-4">Email ID</label>
+            </div>
+            <div class="col-md-4 mb-3">
+                <input type="text" placeholder="Enter Email ID" class="form-control" id="emailId" name="emailId">
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="taleFax" class="mt-10 ml-4">Tale Fax</label>
+            </div>
+            <div class="col-md-4 mb-3">
+                <input type="text" placeholder="Enter Table Fax" class="form-control" id="taleFax" name="taleFax">
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="address" class="mt-10 ml-4">Address</label>
+            </div>
+            <div class="col-md-4 mb-3">
+                <textarea placeholder="Enter Description" class="form-control" id="address" name="address"></textarea>
+            </div>
+            <button class="offset-6 btn btn-primary">Save</button>
+        </div>
+    </div>
 </div>

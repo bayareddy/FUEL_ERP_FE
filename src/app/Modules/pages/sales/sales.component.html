@@ -1,619 +1,200 @@
-<div class="container">
-
-
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            Sales
-
-        </h1>
-        <ol class="breadcrumb pull-right">
-            <li><a routerLink='../home'><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active" id='sales'>Sales</li>
-        </ol>
-    </section>
-
-    <div class="row">
-        <div class="col-lg-3">
-            <label for="fname">Sale Date</label>
+<div class="container-fluid">
+    <div class="offset-md-2 col-md-8 col-lg-8 offset-lg-2">
+        <h1 class="mt-3">Sales</h1>
+        <div class="row mb-3">
+            <label for="name" class="mt-10 ml-5">Sales Date</label>
+            <input type="date" placeholder="Enter Name" class="form-control col-md-3 ml-3" id="name" name="name">
         </div>
-        <div class="col-lg-3">
-            <input type="date">
+        <div class="col-12 mb-5">
+            <table class="table table-bordered tableTextCenter tableBgClr tableShadow tableHover">
+                <thead>
+                    <tr>
+                        <th *ngFor="let table_head of sales_table_head_list">{{table_head}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of table_data_Sales; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{data.name}}</td>
+                        <td class="text-left">
+                            <span *ngFor="let s of data.shift">{{s}},&nbsp;</span>
+                        </td>
+                        <td class="text-left">
+                            <span *ngFor="let s of data.pump">{{s}},&nbsp;</span>
+                        </td>
+                        <td class="text-left">
+                            <span *ngFor="let s of data.nozzle">{{s}},&nbsp;</span>
+                        </td>
+                        <td>{{data.totalSales}}</td>
+                        <td>
+                            <i class="fas fa-edit cursor-pointer clr-gray" matTooltip="Edit"></i>&nbsp;&nbsp;&nbsp;
+                            <i class="fas fa-trash cursor-pointer clr-gray" matTooltip="Delete"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </div>
-
-    <section class="content">
-        <!-- Small boxes (Stat box) -->
-        <div class="row">
-            <div class="box-body">
-                <!-- small box -->
-                <table class="table table-bordered userTable1">
-                    <tr>
-
-                        <th style="width: 10px">#</th>
-                        <th>Name</th>
-                        <th>Shift</th>
-                        <th>Pump</th>
-                        <th>Nozzle</th>
-                        <th>Total Sales</th>
-                        <th style="width: 40px">Action</th>
-
-                    </tr>
-                    <tr>
-                        <td>1.</td>
-                        <td>Ramana</td>
-                        <td>Shift-1</td>
-                        <td>Pump-1</td>
-                        <td>Nozzle-1</td>
-                        <td>1,00,000</td>
-                        <td>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
-
-                    </tr>
-                    <tr>
-                        <td>2.</td>
-                        <td>Krishna</td>
-                        <td>Shift-2</td>
-                        <td>Pump-2</td>
-                        <td>Nozzle-1</td>
-                        <td>20,000</td>
-                        <td>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
-
-                    </tr>
-                    <tr>
-                        <td>3.</td>
-                        <td>Prasad</td>
-                        <td>Shift-2, Shift-3</td>
-                        <td>Pump-1</td>
-                        <td>Nozzle-1</td>
-                        <td>70,000</td>
-                        <td>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
-
-                    </tr>
-                    <tr>
-                        <td>4.</td>
-                        <td>Ramesh</td>
-                        <td>Shift-3</td>
-                        <td>Pump-1</td>
-                        <td>Nozzle-1</td>
-                        <td>1,00,000</td>
-                        <td>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
-
-                    </tr>
-                </table>
-                <div class="clearfix">
-                    <input type="submit" value="Add Sale">
-                    <ul class="pagination pagination-sm no-margin pull-right">
-                        <li><a href="#">&laquo;</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">&raquo;</a></li>
-                    </ul>
-                </div>
+        <h1>Add Sale</h1>
+        <div class="divContainer form-group row">
+            <div class="col-md-2 mb-3">
+                <label for="pPerson" class="mt-10 ml-4">Primary Person</label>
             </div>
-            <!-- ./col -->
-
-        </div>
-    </section>
-
-    <div class="divContainer">
-
-        <div class="row">
-            <div class="col-lg-3">
-                <label for="fname">Primary Person</label>
+            <div class="col-md-4 mb-3">
+                <input type="text" placeholder="Enter Primary Person" class="form-control" id="pPerson" name="pPerson">
             </div>
-            <div class="col-lg-3">
-                <input type="text" id="lname" name="lastname">
+            <div class="col-md-2 mb-3">
+                <label for="sPerson" class="mt-10 ml-4">Secondary Person</label>
             </div>
-            <div class="col-lg-3">
-                <label for="fname">Secondary Person</label>
+            <div class="col-md-4 mb-3">
+                <input type="text" placeholder="Enter Secondary Person" class="form-control" id="sPerson" name="sPerson">
             </div>
-            <div class="col-lg-3">
-                <input type="text" id="lname" name="lastname">
+            <div class="col-md-2 mb-3">
+                <label for="shift" class="mt-10 ml-4">Shift</label>
             </div>
-
-
-        </div>
-
-        <div class="row">
-            <div class="col-lg-3">
-                <label for="fname">Shift</label>
-            </div>
-            <div class="col-lg-3">
-                <select id="country" name="country" multiple>
-                    <option value="australia">Shift-1</option>
-                    <option value="canada">Shift-2</option>
-                    <option value="usa">Shift-3</option>
+            <div class="col-md-4 mb-3">
+                <select class="form-control" id="shift" name="shift">
+                    <option value="Shift-1">Shift-1</option>
+                    <option value="Shift-2">Shift-2</option>
+                    <option value="Shift-3">Shift-3</option>
                 </select>
             </div>
-
-            <div class="col-lg-3">
-                <label for="fname">Pump</label>
+            <div class="col-md-2 mb-3">
+                <label for="pump" class="mt-10 ml-4">Pump</label>
             </div>
-            <div class="col-lg-3">
-                <select id="country" multiple>
-                    <option value="australia">Pump-1</option>
-                    <option value="canada">Pump-2</option>
-                    <option value="usa">Pump-3</option>
-                    <option value="usa">Pump-4</option>
+            <div class="col-md-4 mb-3">
+                <select class="form-control" id="pump" name="pump">
+                    <option value="Pump-1">Pump-1</option>
+                    <option value="Pump-2">Pump-2</option>
+                    <option value="Pump-3">Pump-3</option>
                 </select>
             </div>
-
-        </div>
-
-        <div class="row">
-
-
-            <div class="col-lg-3">
-                <label for="fname">Nozzle</label>
+            <div class="col-md-2 mb-3">
+                <label for="nozzle" class="mt-10 ml-4">Nozzle</label>
             </div>
-            <div class="col-lg-3">
-                <select id="country" multiple>
-                    <option value="australia">Nozzle-1</option>
-                    <option value="canada">Nozzle-2</option>
-                    <option value="usa">Nozzle-3</option>
-                    <option value="usa">Nozzle-4</option>
+            <div class="col-md-4 mb-3">
+                <select class="form-control" id="nozzle" name="nozzle">
+                    <option value="Nozzle-1">Nozzle-1</option>
+                    <option value="Nozzle-2">Nozzle-2</option>
+                    <option value="Nozzle-3">Nozzle-3</option>
                 </select>
             </div>
-
+            <button class="offset-6 btn btn-primary">Save</button>
         </div>
-
-
-    </div>
-
-    <section class="content">
-        <!-- Small boxes (Stat box) -->
-        <div class="row">
-            <div class="box-body">
-                <!-- small box -->
-                <table class="table table-bordered userTable">
+        <h1>Fuels</h1>
+        <div class="col-12 mb-5 mt-3">
+            <table class="table table-bordered tableTextCenter tableBgClr tableShadow tableHover">
+                <thead>
                     <tr>
-                        <th style="width: 10px">#</th>
-                        <th>Pump</th>
-                        <th>Nozzle</th>
-                        <th>Product</th>
-                        <th>Opening Balance</th>
-                        <th>Closing Balance</th>
-                        <th>Testing</th>
-                        <th>Sale Fuel Qty</th>
-                        <th>Ltr Price</th>
-                        <th>Sales</th>
-                        <th style="width: 40px">Action</th>
+                        <th *ngFor="let table_head of fuel_table_head_list">{{table_head}}</th>
                     </tr>
-                    <tr>
-                        <td>1.</td>
-                        <td>Pump-1</td>
-                        <td>Nozzle-1</td>
-                        <td>Petrol</td>
-                        <td>10000</td>
-                        <td>2000</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>70</td>
-                        <td>5000</td>
-                        <td>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
-
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of table_data_Fuel; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{data.pump}}</td>
+                        <td>{{data.nozzle}}</td>
+                        <td>{{data.product}}</td>
+                        <td>{{data.openingBalace}}</td>
+                        <td>{{data.closingBalance}}</td>
+                        <td>{{data.testing}}</td>
+                        <td>{{data.saleFuelQty}}</td>
+                        <td>{{data.ltrPrice}}</td>
+                        <td>{{data.sales}}</td>
+                        <td>
+                            <i class="fas fa-edit cursor-pointer clr-gray" matTooltip="Edit"></i>&nbsp;&nbsp;&nbsp;
+                            <i class="fas fa-trash cursor-pointer clr-gray" matTooltip="Delete"></i>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>2.</td>
-                        <td>Pump-1</td>
-                        <td>Nozzle-2</td>
-                        <td>Diesel</td>
-                        <td>10000</td>
-                        <td>2000</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>70</td>
-                        <td>5000</td>
-                        <td>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
-
-                    </tr>
-                    <tr>
-                        <td>3.</td>
-                        <td>Pump-1</td>
-                        <td>Nozzle-3</td>
-                        <td>Diesel</td>
-                        <td>10000</td>
-                        <td>2000</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>70</td>
-                        <td>5000</td>
-                        <td>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
-
-                    </tr>
-                    <tr>
-                        <td>4.</td>
-                        <td>Pump-1</td>
-                        <td>Nozzle-4</td>
-                        <td>Diesel</td>
-                        <td>10000</td>
-                        <td>2000</td>
-                        <td>5</td>
-                        <td>1000</td>
-                        <td>70</td>
-                        <td>5000</td>
-                        <td>&nbsp;&nbsp;&nbsp;<i class="fas fa-trash" style="color: red;"></i></td>
-
-                    </tr>
-                </table>
-                <div class="clearfix">
-                    <input type="submit" value="Add">
-                    <ul class="pagination pagination-sm no-margin pull-right">
-                        <li><a href="#">&laquo;</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">&raquo;</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- ./col -->
-
+                </tbody>
+            </table>
         </div>
-    </section>
-
-
-
-    <div class="divContainer1">
-
-        <div class="row">
-            <div class="col-lg-3">
-                <label for="fname">Total Fuel Amount</label>
+        <h1>Add Fuel</h1>
+        <div class="divContainer form-group row">
+            <div class="col-md-2 mb-3">
+                <label for="totalFuelAmount" class="mt-10 ml-4">Fuel Amount</label>
             </div>
-            <div class="col-lg-2">
-                <input type="text" id="fname" name="firstname" value="1,00,000">
+            <div class="col-md-4 mb-3">
+                <input type="text" placeholder="Enter Total Fuel Amount" class="form-control" id="totalFuelAmount" name="totalFuelAmount" value="1000">
             </div>
-
-
-            <div class="col-lg-3">
-                <label for="lname"> Card Payment</label>
+            <div class="col-md-2 mb-3">
+                <label for="cardPayment" class="mt-10 ml-4">Card Payment</label>
             </div>
-            <div class="col-lg-2">
-                <input type="text" id="lname" name="lastname">
-
+            <div class="col-md-3 mb-3">
+                <input type="text" placeholder="Enter Card Payment" class="form-control" id="cardPayment" name="cardPayment">
             </div>
-            <div class="col-lg-1">
-                <button class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#myModal">Enter</button>
-
-
-                <!-- The Modal -->
-                <div class="modal" id="myModal" style="font-family: cursive ;">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-
-                           <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="modal-title" style="font-family: cursive;">Swiping</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-                            <div *ngIf='swipeAdded' class="alert alert-success">Added Successfully</div>
-                            
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-
-                                <div class="container">
-                                    <table style="width: 50px; height: 1px; margin-left: 30px;"
-                                        class="table table-bordered userTable">
-                                        <tr class="forTh">
-
-
-                                            <th>S.NO</th>
-                                            <th>MMID</th>
-                                            <th>CardPayments</th>
-                                            <th>Action</th>
-
-
-                                        </tr>
-                                        <tr *ngFor='let swipe of swipingArray; let i=index'>
-                                            <td>{{i+1}}</td>
-                                            <td>{{swipe.mmid}}</td>
-                                            <td>{{swipe.payment}}</td>
-                                            <td><i style="color: green;" class="fas fa-edit"></i>&nbsp;&nbsp;&nbsp;<i
-                                                    class="fas fa-trash" style="color: red;"></i></td>
-                                        </tr>
-                                       
-                                    </table>
-
-                                    <ul class="pagination pagination-sm">
-                                        <li><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                    </ul>
-
-                                    <button type="button" (click)='hideSwipe()'
-                                        class="btn btn-outline-success btn-sm pull-right" *ngIf='!showAdd'>Add</button>
-
-
-
-                                    <div *ngIf='showAdd' class="swipingAddDiv">
-                                        <form [formGroup]='swipeForm' (ngSubmit)='swipeSubmit()'>
-
-                                            <div class="row">
-                                                <div class="col-lg-6"> <label for="">MMID</label></div>
-                                                <div class="col-lg-6">
-                                                    <select name="" id="" style="height: 50px;"  formControlName='mmid'>
-                                                        <option value="1" selected disabled>Select MMID</option>
-                                                        <option value="MMID1">MMID1</option>
-                                                        <option value="MMID2">MMID2</option>
-                                                        <option value="MMID3">MMID3</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-lg-6"> <label for="">Card Payment</label></div>
-                                                <div class="col-lg-6">
-                                                   <input type="text" formControlName='payment'>
-                                                </div>
-                                            </div>
-
-                                           
-                                            <button type="submit" class="btn btn-outline-success btn-sm pull-right">Save</button>
-
-
-                                        </form>
-
-                               
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-
-
-                                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-lg-3">
-                <label for="lname">Credit Sale</label>
-            </div>
-            <div class="col-lg-2">
-                <input type="text" id="lname" name="lastname">
-
-            </div>
-
-            <div class="col-lg-3">
-                <label for="fname">Check Payment</label>
-            </div>
-            <div class="col-lg-2">
-                <input type="text" id="fname" name="firstname">
-            </div>
-
-            <div class="col-lg-1">
-                <button class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#check">Enter</button>
-            </div>
-
-            <!-- The Modal -->
-            <div class="modal" id="check" style="font-family: cursive ;">
-                <div class="modal-dialog" >
-                    <div class="modal-content">
-
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h2 class="modal-title" style="font-family: cursive ;">Check Payment</h2>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-
-                        <!-- Modal body -->
-                        <div class="modal-body">
-
-                            <div class="container">
-                                <table style="width: 1px;" class="table table-bordered">
-                                    <tr>
-
-<th>S.No</th>
-                                        <th>Vendor Name</th>
-                                        <th>Check No</th>
-                                        <th>Bank Name</th>
-                                        <th>Amount</th>
-                                        <th>Action</th>
-                                   
-
-
-
-                                    </tr>
-                                    <tr *ngFor='let check of checkArray; let i=index'>
-                                        <td>{{i}}</td>
-                                        <td>{{check.vendorName}}</td>
-                                        <td>{{check.checkNo}}</td>
-                                        <td>{{check.bankName}}</td>
-                                        <td>{{check.amount}}</td>
-                                        <td><i style="color: green;" class="fas fa-edit"></i>&nbsp;&nbsp;&nbsp;<i
-                                            class="fas fa-trash" style="color: red;"></i></td>
-                                    </tr>
-                         
-                                </table>
-
-                            </div>
-
-                        </div>
-
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-success">ADD</button>
-
-                            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-
-
-        <div class="row">
-            <div class="col-lg-3">
-                <label for="fname">Company Card</label>
-            </div>
-            <div class="col-lg-2">
-                <input type="text" id="fname" name="firstname">
-            </div>
-
-
-            <div class="col-lg-3">
-                <label for="lname">Wallet Payment</label>
-            </div>
-            <div class="col-lg-2">
-                <input type="text" id="lname" name="lastname">
-
-            </div>
-            <div class="col-lg-1">
-                <button class="btn btn-outline-success btn-sm" data-toggle="modal"
-                    data-target="#myModal1">Enter</button>
-
-                <!-- The Modal -->
-                <div class="modal" id="myModal1">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h2 class="modal-title" style="font-family: cursive;">Wallet Payment</h2>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-
-                                <div class="container divi">
-
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <label for="fname" style="font-family: cursive; float: right;">
-                                                Paytm</label>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <input type="text" id="lname" name="lastname" value="50000">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <label for="fname" style="font-family: cursive;float: right;"> Google
-                                                Pay</label>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <input type="text" id="lname" name="lastname" value="10000">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <label for="fname" style="font-family: cursive; float: right;">
-                                                MobiKwik</label>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <input type="text" id="lname" name="lastname" value="20000">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <label for="fname" style="font-family: cursive; float: right;"> Amazan
-                                                Pay</label>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <input type="text" id="lname" name="lastname" value="10000">
-                                        </div>
-                                    </div>
-
-
-
-
-
-
-                                </div>
-
-                            </div>
-
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-success">Save</button>
-
-                                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3">
-                <label for="fname">Bank Card</label>
-            </div>
-            <div class="col-lg-2">
-                <input type="text" id="fname" name="firstname">
-            </div>
-
-
-            <div class="col-lg-3">
-                <label for="lname">Expenses</label>
-            </div>
-            <div class="col-lg-2">
-                <input type="text" id="lname" name="lastname">
-
-            </div>
-            <div class="col-lg-1">
+            <div class="col-md-1 mb-3">
                 <button class="btn btn-outline-success btn-sm">Enter</button>
             </div>
+            <div class="col-md-2 mb-3">
+                <label for="creditSale" class="mt-10 ml-4">Credit Sale</label>
+            </div>
+            <div class="col-md-4 mb-3">
+                <input type="text" placeholder="Enter Credit Sale" class="form-control" id="creditSale" name="creditSale">
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="checkPayment" class="mt-10 ml-4">Check Payment</label>
+            </div>
+            <div class="col-md-3 mb-3">
+                <input type="text" placeholder="Enter Check Payment" class="form-control" id="checkPayment" name="checkPayment">
+            </div>
+            <div class="col-md-1 mb-3">
+                <button class="btn btn-outline-success btn-sm">Enter</button>
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="companyCard" class="mt-10 ml-4">Company Card</label>
+            </div>
+            <div class="col-md-4 mb-3">
+                <input type="text" placeholder="Enter Company Card" class="form-control" id="companyCard" name="companyCard">
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="walletPayment" class="mt-10 ml-4">Wallet Payment</label>
+            </div>
+            <div class="col-md-3 mb-3">
+                <input type="text" placeholder="Enter Wallet Payment" class="form-control" id="walletPayment" name="walletPayment">
+            </div>
+            <div class="col-md-1 mb-3">
+                <button class="btn btn-outline-success btn-sm">Enter</button>
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="bankCard" class="mt-10 ml-4">Bank Card</label>
+            </div>
+            <div class="col-md-4 mb-3">
+                <input type="text" placeholder="Enter Bank Card" class="form-control" id="bankCard" name="bankCard">
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="expenses" class="mt-10 ml-4">Expenses</label>
+            </div>
+            <div class="col-md-3 mb-3">
+                <input type="text" placeholder="Enter Expenses" class="form-control" id="expenses" name="expenses">
+            </div>
+            <div class="col-md-1 mb-3">
+                <button class="btn btn-outline-success btn-sm">Enter</button>
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="bShot" class="mt-10 ml-4">Balance Short</label>
+            </div>
+            <div class="col-md-4 mb-3">
+                <input type="text" placeholder="Enter Balance Short" class="form-control" id="total" name="total">
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="total" class="mt-10 ml-4">Total</label>
+            </div>
+            <div class="col-md-3 mb-3">
+                <input type="text" placeholder="Enter Total" class="form-control" id="total" name="total" value="10000">
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="smsNotify" class="mt-10  ml-4">Allow SMS Notifications</label>
+                <input type="checkbox" id="smsNotify" name="smsNotify" class="mt-3 ml-3">
+            </div>
+            <div class="col-md-3 mb-3">
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="mailNotify" class="mt-10  ml-4">Allow Mail Notifications</label>
+                <input type="checkbox" id="mailNotify" name="mailNotify" class="mt-3 ml-3">
+            </div>
+            <div class="col-md-3 mb-3">
+            </div>
+            <button class="offset-6 btn btn-primary">Save</button>
         </div>
-        <div class="row">
-            <div class="col-lg-3">
-                <label for="fname">Balance Short</label>
-            </div>
-            <div class="col-lg-2">
-                <input type="text" id="fname" name="firstname">
-            </div>
-
-
-            <div class="col-lg-3">
-                <label for="lname">Total</label>
-            </div>
-            <div class="col-lg-2">
-                <input type="text" value="1,00,000">
-
-            </div>
-            <div class="col-lg-1">
-
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-3">
-                <label for="country">Allow SMS Notification</label>
-            </div>
-            <div class="col-lg-3">
-                <input type="checkbox">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3">
-            </div>
-            <div class="col-lg-3">
-                <input type="submit" value="Save">
-            </div>
-        </div>
-
     </div>
-
 </div>
