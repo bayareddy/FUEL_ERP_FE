@@ -7,10 +7,10 @@
             </div>
         </div>
         <div>
-            <p >
+            <p>
                 <img class="roundImg" (click)='zoom=!zoom' [ngClass]='zoom ? "roundImg1":""' [src]="imgPath" width="40px" height="40px">&nbsp;<span><b style="color: white;margin-right: 20px;">PardhaSaradhi </b></span>
             </p>
-            
+
 
             <!-- <button mat-button [matMenuTriggerFor]="menu" class="userProfile mr-4 font-18 rounded-circle border cursor-pointer outline-none">A</button>
             <mat-menu #menu="matMenu" class="logout">
@@ -23,49 +23,48 @@
     <div id="mySidenav" class="sidenav pt-6" [ngClass]="openSideNav ? 'showNav':'' ">
         <a class="font-30 float-right mr-2" (click)="closeNav()">&times;</a>
         <p class="">
-            <img class="roundImg" [src]="imgPath" width="40px"
-             height="40px">&nbsp;<span><b style="color: white;">PardhaSaradhi </b></span>
+            <img class="roundImg" [src]="imgPath" width="40px" height="40px">&nbsp;<span><b style="color: white;">PardhaSaradhi </b></span>
         </p>
         <!-- <a *ngFor="let item of MenuList" [routerLink]="item.href" routerLinkActive="active">
             <i class="{{item.iconText}}"></i>
             <span class="ml-2">{{item.name}}</span>
         </a> -->
 
- 
+
         <a routerLink="home" routerLinkActive="active">
             <i class="fas fa-home"></i>
             <span class="ml-2">Home</span>
         </a>
 
-        <a (click)='admin=!admin' routerLinkActive="active" >
+        <a (click)='admin=!admin' routerLinkActive="active">
             <i class="fas fa-user"></i>
             <span class="ml-2" class="dropdown-toggle"> Admin</span></a>
-            <div class="sales" *ngIf='admin' >
-                <li routerLink="credit-customer"  routerLinkActive='active'><a>Credit Customer</a></li>
-                <li routerLink="product"  routerLinkActive='active'><a>Product</a></li>
-                <li routerLink="role"  routerLinkActive='active'><a>Role</a></li>
-                <li routerLink="supplier"  routerLinkActive='active'><a>Supplier</a></li>
-                <li routerLink="user"  routerLinkActive='active'><a>User</a></li>
-                
-            </div>
+        <div class="sales" *ngIf='admin'>
+            <li routerLink="credit-customer" routerLinkActive='active'><a>Credit Customer</a></li>
+            <li routerLink="product" routerLinkActive='active'><a>Product</a></li>
+            <li routerLink="role" routerLinkActive='active'><a>Role</a></li>
+            <li routerLink="supplier" routerLinkActive='active'><a>Supplier</a></li>
+            <li routerLink="user" routerLinkActive='active'><a>User</a></li>
+
+        </div>
 
 
-        <a (click)='sale=!sale' routerLinkActive="active" >
+        <a (click)='sale=!sale' routerLinkActive="active">
             <i class="fas fa-gas-pump"></i>
             <span class="ml-2" class="dropdown-toggle"> Sales</span></a>
-            <div class="sales" *ngIf='sale' >
-                <li routerLink="sales"  routerLinkActive='active'><a>Sales</a></li>
-                
-            </div>
+        <div class="sales" *ngIf='sale'>
+            <li routerLink="sales" routerLinkActive='active'><a>Sales</a></li>
 
-            <a (click)='master=!master' routerLinkActive="active" >
-                <i class="fas fa-user"></i>
-                <span class="ml-2" class="dropdown-toggle"> Master</span></a>
-                <div class="sales" *ngIf='master' >
-                    <li routerLink="tank"  routerLinkActive='active'><a> Tank</a></li>
-                    <li routerLink="pumpnozzle"  routerLinkActive='active'><a>Pump&Nozzle2</a></li>
-                </div>
-        
+        </div>
+
+        <a (click)='master=!master' routerLinkActive="active">
+            <i class="fas fa-user"></i>
+            <span class="ml-2" class="dropdown-toggle"> Master</span></a>
+        <div class="sales" *ngIf='master'>
+            <li routerLink="tank" routerLinkActive='active'><a> Tank</a></li>
+            <li routerLink="pumpnozzle" routerLinkActive='active'><a>Pump&Nozzle2</a></li>
+        </div>
+
         <a routerLink="" routerLinkActive="active">
             <i class="fas fa-file-contract"></i>
             <span class="ml-2">Accounts</span>
@@ -86,9 +85,9 @@
     </div>
     <br><br><br>
     <router-outlet></router-outlet>
-    
-</div>
 
+</div>
+<!-- 
 <footer class="bg-light main-footer" >
                
     <strong> &nbsp;Copyright &copy; 2020 <a href="">FuelERP</a>.</strong> All rights reserved.
@@ -97,7 +96,7 @@
         <b class="pull-right">Version 2.0 </b> 
     </span>
 
-</footer>
+</footer> -->
 
 <!-- 
 <a routerLink="home" routerLinkActive="active">

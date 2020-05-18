@@ -7,11 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreditCustomerComponent implements OnInit {
 
+  table_data = [
+    { name: 'raju', creditAmount: 500, outStandingBalancy: 500 },
+    { name: 'raju', creditAmount: 500, outStandingBalancy: 500 },
+    { name: 'raju', creditAmount: 500, outStandingBalancy: 500 },
+    { name: 'raju', creditAmount: 500, outStandingBalancy: 500 },
+    { name: 'raju', creditAmount: 500, outStandingBalancy: 500 },
+  ];
+  table_head_list = ['#', 'Name', 'Credit Amount', 'Out Standing Amount', 'Action']
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
   }
-
-  
 
 }
